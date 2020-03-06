@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ "$(uname)" == "Linux" ]; then
+    sudo apt-get update && \
+        sudo apt-get install -y \
+            curl \
+            mosh \
+            tmux \
+            vim \
+            zsh
+fi
+
+# Oh-my-zsh
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sudo usermod -s /bin/zsh "${USER}"
+    rm "$HOME/.zshrc"
+fi
+
+zsh -c make all
+
