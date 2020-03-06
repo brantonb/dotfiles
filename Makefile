@@ -7,6 +7,9 @@ all:
 	[ -f ~/.zshrc ] || ln -s $(PWD)/zshrc ~/.zshrc
 
 clean:
+	[ -h ~/.aliases ] || rm ~/.aliases
+	[ -h ~/.exports ] || rm ~/.exports
+	[ -h ~/.path ] || rm ~/.path
 	[ -h ~/.vimrc ] && rm ~/.vimrc
 	[ -h ~/.zsh_profile ] && rm ~/.zsh_profile
 	[ -h ~/.zshrc ] && rm ~/.zshrc
