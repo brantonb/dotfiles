@@ -1,5 +1,7 @@
 all:
+	[ -f ~/.aliases ] || ln -s $(PWD)/aliases ~/.aliases
 	[ -f ~/.exports ] || ln -s $(PWD)/exports ~/.exports
+	[ -f ~/.path ] || ln -s $(PWD)/path ~/.path
 	[ -f ~/.vimrc ] || ln -s $(PWD)/vimrc ~/.vimrc
 	[ -f ~/.zsh_profile ] || ln -s $(PWD)/zsh_profile ~/.zsh_profile
 	[ -f ~/.zshrc ] || ln -s $(PWD)/zshrc ~/.zshrc

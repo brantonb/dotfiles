@@ -5,10 +5,13 @@ if [ "$(uname)" == "Linux" ]; then
         sudo apt-get install -y \
             curl \
             mosh \
+            ruby-full \
             tmux \
             vim \
             zsh
 fi
+
+gem install --user-install bundler
 
 # Oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
