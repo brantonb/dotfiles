@@ -5,9 +5,9 @@ if [ "$(uname)" == "Linux" ]; then
         sudo apt-get install -y \
             curl \
             mosh \
+            neovim \
             ruby-full \
             tmux \
-            vim \
             zsh
 fi
 
