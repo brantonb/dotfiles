@@ -17,10 +17,12 @@ else
 endif
 
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-vinegar'
 
 " IDE
 Plug 'airblade/vim-gitgutter' " Show git status in gutter
 Plug 'vim-scripts/bufkill.vim', {'on': 'BD'}  " Kill buffer but not window
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
