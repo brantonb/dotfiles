@@ -18,6 +18,10 @@ endif
 
 Plug 'tpope/vim-sensible'
 
+" IDE
+Plug 'airblade/vim-gitgutter' " Show git status in gutter
+Plug 'vim-scripts/bufkill.vim', {'on': 'BD'}  " Kill buffer but not window
+
 call plug#end()
 
 set ignorecase
