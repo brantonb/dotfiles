@@ -8,6 +8,7 @@ if [ "$(uname)" == "Linux" ]; then
             jq \
             mosh \
             neovim \
+            pipenv \
             ruby-full \
             tmux \
             w3m \
