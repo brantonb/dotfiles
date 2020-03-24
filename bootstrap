@@ -26,3 +26,8 @@ fi
 
 zsh -c make all
 
+if [ "$(uname)" == "Darwin" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    brew analytics off
+    brew bundle install
+fi
