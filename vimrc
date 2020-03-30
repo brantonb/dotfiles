@@ -24,6 +24,8 @@ Plug 'airblade/vim-gitgutter' " Show git status in gutter
 Plug 'vim-scripts/bufkill.vim', {'on': 'BD'}  " Kill buffer but not window
 Plug 'tpope/vim-fugitive'
 
+Plug 'ledger/vim-ledger'
+
 call plug#end()
 
 set ignorecase
@@ -34,3 +36,8 @@ set number
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" ledger
+au FileType ledger noremap { ?^\d<CR>
+au FileType ledger noremap } /^\d<CR>
+let g:ledger_align_at = 58
