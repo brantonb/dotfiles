@@ -1,0 +1,14 @@
+[user]
+	name = Branton Boehm
+	userConfigOnly = true
+[alias]
+	graph = log --oneline --graph --decorate --branches
+	shame = blame -w -M
+[merge]
+	conflictStyle = diff3
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[push]
+	default = upstream
