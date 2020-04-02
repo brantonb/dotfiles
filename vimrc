@@ -37,6 +37,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
+set list
+
 " ledger
 au FileType ledger noremap { ?^\d<CR>
 au FileType ledger noremap } /^\d<CR>
