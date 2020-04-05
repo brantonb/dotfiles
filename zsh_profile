@@ -18,3 +18,5 @@ unset file
 if [ "$(uname)" = "Darwin" ]; then
     brew bundle check ~/Brewfile
 fi
+
+eval "$(direnv hook zsh)"

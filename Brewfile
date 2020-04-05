@@ -24,6 +24,7 @@ brew "wget"
 cask "zeplin"
 
 # Terminal upgrades
+brew "direnv"
 brew "thefuck"
 brew "tmux"
 
