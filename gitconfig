@@ -1,6 +1,10 @@
 [user]
 	name = Branton Boehm
 	userConfigOnly = true
+	email = branton.boehm@smartsheet.com
+	signingkey = D76940FA89CF3035
+[commit]
+	gpgsign = false
 [alias]
 	graph = log --oneline --graph --decorate --branches
 	shame = blame -w -M
@@ -12,3 +16,10 @@
 	rebase = true
 [push]
 	default = upstream
+    autoSetupRemote = true
+[url "git@git.lab.smartsheet.com:mobile-cocoapods/mobileshared.git"]
+	insteadOf = https://git.lab.smartsheet.com/mobile-cocoapods/mobileshared.git
+
+#[url "git@github.com:"]
+#	insteadOf = https://github.com/
+

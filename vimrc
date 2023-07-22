@@ -23,8 +23,10 @@ Plug 'tpope/vim-vinegar'
 Plug 'airblade/vim-gitgutter' " Show git status in gutter
 Plug 'vim-scripts/bufkill.vim', {'on': 'BD'}  " Kill buffer but not window
 Plug 'tpope/vim-fugitive'
+Plug 'git@github.com:github/copilot.vim.git'
 
 Plug 'ledger/vim-ledger'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 

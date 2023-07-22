@@ -2,3 +2,10 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 export KEYBASE_RUN_MODE=prod
+
+# To read the values, run `op read <variable>`
+export OP_SAUCE_USERNAME="op://Work/SauceLabs API/username"
+export OP_SAUCE_ACCESS_KEY="op://Work/SauceLabs API/credential"
+export OP_GITLAB_API_TOKEN="op://Work/GitLab API/credential"
+export OP_SMARTSHEET_API_TOKEN="op://Work/Smartsheet API/credential"
+export OP_APPLE_ID_PASSWORD="op://Work/Apple ID/password"
