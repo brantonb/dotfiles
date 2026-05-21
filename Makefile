@@ -14,16 +14,16 @@ all:
 	[ -f ~/Brewfile ] || ln -s $(PWD)/Brewfile ~/Brewfile
 
 clean:
-	[ -h ~/.aliases ] || rm ~/.aliases
-	[ -h ~/.config/git/config ] || rm ~/.config/git/config
-	[ -h ~/.config/git/ignore ] || rm ~/.config/git/ignore
-	[ -h ~/.config/nvim/init.vim ] || rm ~/.config/nvim/init.vim
-	[ -h ~/.exports ] || rm ~/.exports
-	[ -h ~/.path ] || rm ~/.path
-	[ -h ~/.tmux.conf ] | rm ~/.tmux.conf
+	[ -h ~/.aliases ] && rm ~/.aliases
+	[ -h ~/.config/git/config ] && rm ~/.config/git/config
+	[ -h ~/.config/git/ignore ] && rm ~/.config/git/ignore
+	[ -h ~/.config/nvim/init.vim ] && rm ~/.config/nvim/init.vim
+	[ -h ~/.exports ] && rm ~/.exports
+	[ -h ~/.path ] && rm ~/.path
+	[ -h ~/.tmux.conf ] && rm ~/.tmux.conf
 	[ -h ~/.vimrc ] && rm ~/.vimrc
 	[ -h ~/.zsh_profile ] && rm ~/.zsh_profile
 	[ -h ~/.zshrc ] && rm ~/.zshrc
-	[ -f ~/Brewfile ] || ln -s $(PWD)/Brewfile ~/Brewfile
+	[ -h ~/Brewfile ] && rm ~/Brewfile
 
-.PHONY: all
+.PHONY: all clean
