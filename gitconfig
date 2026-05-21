@@ -1,10 +1,8 @@
 [user]
 	name = Branton Boehm
-	userConfigOnly = true
-	email = branton.boehm@smartsheet.com
-	signingkey = D76940FA89CF3035
-[commit]
-	gpgsign = false
+	email = development@brantonboehm.com
+	signingkey = key::ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINz180vdbdbClag3rpZ/Lx8Reodt6QebvS86vcpBqLfP
+
 [alias]
 	graph = log --oneline --graph --decorate --branches
 	shame = blame -w -M
@@ -16,10 +14,25 @@
 	rebase = true
 [push]
 	default = upstream
-    autoSetupRemote = true
-[url "git@git.lab.smartsheet.com:mobile-cocoapods/mobileshared.git"]
-	insteadOf = https://git.lab.smartsheet.com/mobile-cocoapods/mobileshared.git
+	autoSetupRemote = true
 
-#[url "git@github.com:"]
-#	insteadOf = https://github.com/
+[includeIf "hasconfig:remote.*.url:git@github.com:SiteBionics/**"]
+	path = "config-sitebionics"
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 
+[includeIf "hasconfig:remote.*.url:git@github-algo:Algo-17/**"]
+	path = "config-algo"
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+    allowedSignersFile = "~/.ssh/allowed_signers"
+
+[commit]
+	gpgsign = true
