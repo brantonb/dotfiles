@@ -3,6 +3,8 @@ all:
 	[ -d ~/.config/git ] || mkdir -p ~/.config/git
 	[ -f ~/.config/git/config ] || ln -s $(PWD)/gitconfig ~/.config/git/config
 	[ -f ~/.config/git/ignore ] || ln -s $(PWD)/gitignore ~/.config/git/ignore
+	[ -L ~/.config/git/config-sitebionics ] || (rm -f ~/.config/git/config-sitebionics && ln -s $(PWD)/config-sitebionics ~/.config/git/config-sitebionics)
+	[ -L ~/.config/git/config-algo ] || (rm -f ~/.config/git/config-algo && ln -s $(PWD)/config-algo ~/.config/git/config-algo)
 	[ -d ~/.config/nvim ] || mkdir -p ~/.config/nvim
 	[ -f ~/.config/nvim/init.vim ] || ln -s $(PWD)/init.vim ~/.config/nvim/init.vim
 	[ -f ~/.exports ] || ln -s $(PWD)/exports ~/.exports
@@ -17,6 +19,8 @@ clean:
 	[ -h ~/.aliases ] && rm ~/.aliases
 	[ -h ~/.config/git/config ] && rm ~/.config/git/config
 	[ -h ~/.config/git/ignore ] && rm ~/.config/git/ignore
+	[ -h ~/.config/git/config-sitebionics ] && rm ~/.config/git/config-sitebionics
+	[ -h ~/.config/git/config-algo ] && rm ~/.config/git/config-algo
 	[ -h ~/.config/nvim/init.vim ] && rm ~/.config/nvim/init.vim
 	[ -h ~/.exports ] && rm ~/.exports
 	[ -h ~/.path ] && rm ~/.path
