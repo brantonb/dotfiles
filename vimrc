@@ -33,6 +33,7 @@ call plug#end()
 set ignorecase
 set smartcase
 set number
+set relativenumber
 
 " tabs
 set tabstop=4
