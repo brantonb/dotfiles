@@ -7,6 +7,7 @@ all:
 	[ -L ~/.config/git/config-algo ] || (rm -f ~/.config/git/config-algo && ln -s $(PWD)/config-algo ~/.config/git/config-algo)
 	[ -d ~/.config/nvim ] || mkdir -p ~/.config/nvim
 	[ -f ~/.config/nvim/init.vim ] || ln -s $(PWD)/init.vim ~/.config/nvim/init.vim
+	[ -f ~/.config/starship.toml ] || ln -s $(PWD)/starship.toml ~/.config/starship.toml
 	[ -f ~/.exports ] || ln -s $(PWD)/exports ~/.exports
 	[ -f ~/.path ] || ln -s $(PWD)/path ~/.path
 	[ -f ~/.tmux.conf ] || ln -s $(PWD)/tmux.conf ~/.tmux.conf
@@ -22,6 +23,7 @@ clean:
 	[ -h ~/.config/git/config-sitebionics ] && rm ~/.config/git/config-sitebionics
 	[ -h ~/.config/git/config-algo ] && rm ~/.config/git/config-algo
 	[ -h ~/.config/nvim/init.vim ] && rm ~/.config/nvim/init.vim
+	[ -h ~/.config/starship.toml ] && rm ~/.config/starship.toml
 	[ -h ~/.exports ] && rm ~/.exports
 	[ -h ~/.path ] && rm ~/.path
 	[ -h ~/.tmux.conf ] && rm ~/.tmux.conf

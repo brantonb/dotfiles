@@ -13,3 +13,5 @@ plugins=(vi-mode)
 eval "$(direnv hook zsh)"
 
 source $ZSH/oh-my-zsh.sh
+
+eval "$(starship init zsh)"

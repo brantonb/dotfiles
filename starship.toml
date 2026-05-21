@@ -1,0 +1,90 @@
+# Two-line prompt: cwd + git on left, lang/context on right, ❯ on line 2
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$fill\
+$swift\
+$dotnet\
+$golang\
+$python\
+$azure\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+continuation_prompt = "▸▸ "
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+style = "bold cyan"
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bold purple"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bold yellow"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+staged = "[+${count}](green)"
+modified = "[!${count}](yellow)"
+untracked = "[?${count}](red)"
+deleted = "[-${count}](red)"
+stashed = "[≡](blue)"
+
+[fill]
+symbol = " "
+
+[swift]
+symbol = " "
+format = "[$symbol$version]($style) "
+style = "bold 208"
+detect_extensions = ["swift"]
+detect_files = ["Package.swift", "Podfile"]
+
+[dotnet]
+symbol = "󰪮 "
+format = "[$symbol$version( $tfm)]($style) "
+style = "bold blue"
+
+[golang]
+symbol = " "
+format = "[$symbol$version]($style) "
+style = "bold cyan"
+
+[python]
+symbol = " "
+format = '[$symbol$pyenv_prefix$version(\($virtualenv\))]($style) '
+style = "bold yellow"
+detect_files = ["requirements.txt", "pyproject.toml", "setup.py", ".python-version", "Pipfile", "uv.lock"]
+detect_extensions = ["py"]
+
+[azure]
+disabled = false
+format = "[$symbol$subscription]($style) "
+symbol = "󰠅 "
+style = "bold blue"
+
+[cmd_duration]
+min_time = 2_000
+format = "[󱦟 $duration]($style) "
+style = "yellow"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+vimcmd_replace_symbol = "[❮](bold yellow)"
+vimcmd_replace_one_symbol = "[❮](bold yellow)"
+vimcmd_visual_symbol = "[❮](bold cyan)"

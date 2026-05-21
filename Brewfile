@@ -34,8 +34,10 @@ cask "vlc"
 # Terminal upgrades
 brew "direnv"
 brew "ripgrep"
+brew "starship"
 brew "tmux"
 brew "tmuxp"
+cask "font-monaspice-nerd-font"
 
 # Others
 cask "1password"
