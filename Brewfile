@@ -1,4 +1,3 @@
-tap "azure/functions"
 
 # IDEs
 brew "neovim"
@@ -6,8 +5,6 @@ cask "visual-studio-code"
 
 # Development tools
 cask "1password-cli"
-brew "az"
-brew "azure/functions/azure-functions-core-tools@4"
 brew "bat"
 cask "claude"
 cask "claude-code"
@@ -22,7 +19,6 @@ cask "keybase"
 cask "ngrok"
 brew "node"
 brew "periphery"
-cask "powershell"
 cask "proxyman"
 brew "python3"
 cask "sf-symbols"
@@ -41,14 +37,11 @@ cask "font-monaspice-nerd-font"
 
 # Others
 cask "1password"
-cask "chatgpt"
 cask "discord"
 cask "doxie"
 cask "elgato-stream-deck"
 cask "firefox"
 brew "ledger"
-cask "microsoft-azure-storage-explorer"
-cask "microsoft-office-businesspro"
 cask "obs"
 cask "pastebot"
 cask "slack"
