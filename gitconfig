@@ -24,7 +24,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 
-[includeIf "hasconfig:remote.*.url:git@github-algo:Algo-17/**"]
+[includeIf "hasconfig:remote.*.url:git@github-algo:*/**"]
 	path = "config-algo"
 
 [gpg]
