@@ -9,7 +9,6 @@ $swift\
 $dotnet\
 $golang\
 $python\
-$azure\
 $cmd_duration\
 $line_break\
 $character\
@@ -69,12 +68,6 @@ format = '[$symbol$pyenv_prefix$version(\($virtualenv\))]($style) '
 style = "bold yellow"
 detect_files = ["requirements.txt", "pyproject.toml", "setup.py", ".python-version", "Pipfile", "uv.lock"]
 detect_extensions = ["py"]
-
-[azure]
-disabled = false
-format = "[$symbol$subscription]($style) "
-symbol = "󰠅 "
-style = "bold blue"
 
 [cmd_duration]
 min_time = 2_000
