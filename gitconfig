@@ -16,8 +16,6 @@
 	default = upstream
 	autoSetupRemote = true
 
-[includeIf "hasconfig:remote.*.url:git@github.com:SiteBionics/**"]
-	path = "config-sitebionics"
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
