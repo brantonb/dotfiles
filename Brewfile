@@ -1,3 +1,4 @@
+tap "1password/tap"
 
 # IDEs
 brew "neovim"
@@ -16,6 +17,7 @@ brew "git-lfs"
 brew "go"
 brew "jq"
 cask "keybase"
+brew "mkcert"
 cask "ngrok"
 brew "node"
 brew "periphery"
@@ -34,6 +36,11 @@ brew "starship"
 brew "tmux"
 brew "tmuxp"
 cask "font-monaspice-nerd-font"
+brew "unar"
+
+# MSU stuff
+brew "ffmpeg"
+cask "audacity"
 
 # Others
 cask "1password"
@@ -43,11 +50,13 @@ cask "elgato-stream-deck"
 cask "firefox"
 brew "ledger"
 cask "obs"
+cask "openlogi"
 cask "pastebot"
 cask "slack"
 brew "streamlink"
 cask "tailscale-app"
 cask "trezor-suite"
+brew "yt-dlp"
 
 # Ladybird
 brew "autoconf"
